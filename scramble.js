@@ -141,7 +141,8 @@ const scrambleWords=(arr) =>{
 
     btn.addEventListener('click', function()
     {
-        if(!play){
+        if(!play)
+        {
             play=true;
             btn.innerHTML = "GUESS";
             guess.classList.toggle('hidden');
@@ -151,12 +152,14 @@ const scrambleWords=(arr) =>{
             msg.innerHTML='Guess the word: ${randomWords}';
 
 
-        }else{
+        }
+        else{
             let tempWord=guess.value;
-            if(tempWord==newWords){
+            if(tempWord==newWords)
+            {
                 console.log('correct');
                 play =false;
-                msg.innerHTML='Awesome it is correct dude.it is $(randWords'};
+                msg.innerHTML='Awesome it is correct dude.it is $(randWords)';
                 btn.innerHTML="Start Again";
                 guess.classList.toggle('hidden');
                 guess.value="";
@@ -165,9 +168,10 @@ const scrambleWords=(arr) =>{
             else{
                 console.log('incorrect');
                 msg.innerHTML = 'SOrry it is ${newWords}';
+            }
 
             }
-        }
+        
 
     }
 
